@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { StaggeredMotion, spring } from "react-motion";
 const imgBg = require("./bg.png");
 
 const Container = styled.div`
@@ -44,18 +45,38 @@ const Container = styled.div`
 `;
 export class ComingSoon extends React.Component {
   render() {
+    const parts = [
+      <div className="heading">Amanda & Calvin</div>,
+      <div className="body">
+        May 12, 2018<br />
+        Carneros Resort and Spa<br />
+        Napa, California<br />
+      </div>,
+      <div className="footer">Site coming soon</div>
+    ];
     return (
       <Container>
         <div className="welcome">
-          <div className="heading">Amanda & Calvin</div>
-          <br />
-          <div className="body">
-            May 12, 2018<br />
-            Carneros Resort and Spa<br />
-            Napa, California<br />
-          </div>
-          <br />
-          <div className="footer">Site coming soon</div>
+          <StaggeredMotion
+            defaultStyles={[{ opacity: 0, marginLeft: -30 }, { opacity: 0, marginLeft: -30 }, { opacity: 0, marginLeft: -30 }]}
+            styles={(s: any[]) =>
+              s.map((_, i) => {
+                return i === 0
+                  ? { opacity: spring(1), marginLeft: spring(0) }
+                  : { opacity: spring(s[i - 1].opacity), marginLeft: spring(s[i - 1].marginLeft) };
+              })
+            }
+          >
+            {styles => (
+              <div>
+                {styles.map((style, i) => (
+                  <div key={i} style={style}>
+                    {parts[i]}
+                  </div>
+                ))}
+              </div>
+            )}
+          </StaggeredMotion>
         </div>
       </Container>
     );
