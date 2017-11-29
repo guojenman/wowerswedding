@@ -8,7 +8,7 @@ const Container = styled.div`
   z-index: 1;
   color: rgb(50, 50, 165);
   width: 100%;
-  height: 11em;
+  height: 16em;
   background: #fff;
   text-align: center;
   li {
@@ -16,15 +16,20 @@ const Container = styled.div`
   }
 
   @media (max-width: 700px) {
-    height: 6rem;
+    height: 6em;
   }
 `
 const Title = styled.h1`
-  padding-top: 2.5rem;
-  font-size: 2.75rem;
+  padding-top: 1em;
+  font-size: 2.75em;
   font-weight: 100;
   @media (max-width: 700px) {
-    padding-top: 1rem;
+    padding-top: 0.5em;
+    font-size: 2.25em;
+  }
+  @media (max-width: 400px) {
+    padding-top: 0.75em;
+    font-size: 1.8em;
   }
 `
 const ItemContainer = styled.ul`
