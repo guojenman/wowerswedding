@@ -1,9 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
-import { ComingSoon } from "./ComingSoon";
+import { AppConstruction } from "./appConstruction";
 
-ReactDOM.render(<ComingSoon />, document.getElementById(
-  "root"
-) as HTMLElement);
+ReactDOM.render(
+  <BrowserRouter>
+    <AppConstruction />
+  </BrowserRouter>,
+  document.getElementById("root") as HTMLElement
+);
