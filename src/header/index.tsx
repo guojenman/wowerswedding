@@ -5,17 +5,27 @@ import Media from "react-media";
 import { elastic as Menu } from "react-burger-menu";
 
 const Container = styled.div`
-  text-align: center;
+  z-index: 1;
   color: rgb(50, 50, 165);
-  padding-top: 2.5em;
-  padding-bottom: 8em;
+  width: 100%;
+  height: 11em;
+  background: #fff;
+  text-align: center;
   li {
     list-style: none;
   }
+
+  @media (max-width: 700px) {
+    height: 6rem;
+  }
 `
 const Title = styled.h1`
-  font-size: 2.75em;
+  padding-top: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 100;
+  @media (max-width: 700px) {
+    padding-top: 1rem;
+  }
 `
 const ItemContainer = styled.ul`
   font-weight: 300;
@@ -41,8 +51,8 @@ export class Header extends React.Component {
       position: 'fixed',
       width: '2rem',
       height: '2rem',
-      right: '1rem',
-      top: '1rem'
+      left: '1rem',
+      top: '2rem'
     },
     bmBurgerBars: {
       background: '#3232a5'
@@ -56,7 +66,7 @@ export class Header extends React.Component {
     },
     bmMenu: {
       background: '#fff',
-      padding: '2.5em 1.5em 0',
+      padding: '1em 1em 0',
       fontSize: '1.15em'
     },
     bmMorphShape: {
@@ -64,10 +74,10 @@ export class Header extends React.Component {
     },
     bmItemList: {
       color: '#3232a5',
-      padding: '0.8em'
+      padding: '0.8rem'
     },
     bmOverlay: {
-      background: 'rgba(0, 0, 0, 0.3)'
+      background: 'rgba(50, 50, 165, 0.3)'
     }
   }
 
@@ -83,11 +93,18 @@ export class Header extends React.Component {
   render() {
     return (
       <Container>
+        <Media query={{ maxWidth: 700 }}>
+          {match => (
+            match
+            ? <Menu styles={this.stylesBurger} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>{this.renderLinks()}</Menu>
+            : null
+          )}
+        </Media>
         <Title>Amanda & Calvin</Title>
         <Media query={{ maxWidth: 700 }}>
           {match => (
             match
-            ? <Menu right styles={this.stylesBurger} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>{this.renderLinks()}</Menu>
+            ? null
             : <ItemContainer>{this.renderLinks()}</ItemContainer>
           )}
         </Media>

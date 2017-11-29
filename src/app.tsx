@@ -14,6 +14,10 @@ const AppContainer = styled.div`
   font-size: 18px;
   line-height: 1.5;
   color: #646464;
+  height: 100%;
+  overflow: auto;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
   p {
     margin-bottom: 1.2em;
   }
@@ -32,7 +36,8 @@ const AppContainer = styled.div`
 export class App extends React.Component {
   render() {
     return (
-      <AppContainer id="outer-container">
+      <div id="outer-container" style={{height: "100%"}}>
+      <AppContainer>
         <Header/>
         <div id="page-wrap">
         <Switch>
@@ -45,6 +50,7 @@ export class App extends React.Component {
         </Switch>
         </div>
       </AppContainer>
+      </div>
     )
   }
 }
