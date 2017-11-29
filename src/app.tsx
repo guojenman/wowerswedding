@@ -32,8 +32,9 @@ const AppContainer = styled.div`
 export class App extends React.Component {
   render() {
     return (
-      <AppContainer>
+      <AppContainer id="outer-container">
         <Header/>
+        <div id="page-wrap">
         <Switch>
           <Route path="/private/wedding" exact component={Wedding} />
           <Route path="/private/where-to-stay" exact component={WhereToStay} />
@@ -42,6 +43,7 @@ export class App extends React.Component {
           <Route path="/private/registry" exact component={Registry} />
           <Route component={Wedding} />
         </Switch>
+        </div>
       </AppContainer>
     )
   }
