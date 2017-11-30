@@ -27,7 +27,7 @@ export class ThingsToDo extends React.Component {
           </Box>
         </MainFlexLocal>
         <MainFlexLocal>
-          <Box width={1} p={.5}>
+          <Box width={1} p={[2, .5]}>
           {
             category.map(place => (
               <p key={place.name}>

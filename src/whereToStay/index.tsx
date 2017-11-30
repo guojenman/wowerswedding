@@ -11,7 +11,7 @@ export class WhereToStay extends React.Component {
       <MainFlex wrap>
         {
           places.map(place => (
-            <Grid key={place.name} width={[1, 1/2]}>
+            <Grid key={place.name} width={[1, 1/2]} p={[1, 0]}>
               <a href={place.url} target={place.name}>
               <Grid width={1/3} p={10}>
                 <Img src={place.image}/>

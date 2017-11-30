@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Media from "react-media";
 import { elastic as Menu } from "react-burger-menu";
@@ -14,7 +14,9 @@ const Container = styled.div`
   li {
     list-style: none;
   }
-
+  .bm-menu li {
+    margin-bottom: 1em;
+  }
   @media (max-width: 700px) {
     height: 6em;
   }
@@ -47,6 +49,19 @@ const ItemImage = styled.img`
   height: 2em;
   margin-right: .3em;
   vertical-align: text-bottom;
+`
+
+const StyledLink = styled(NavLink)`
+  position: relative;
+  &[aria-current="true"]:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -8px;
+    left: 0;
+    background-color: #d9dbf0;
+  }
 `
 
 export class Header extends React.Component {
@@ -88,20 +103,27 @@ export class Header extends React.Component {
 
   renderLinks() {
     return <>
-      <li><Link to="/private/wedding"><ItemImage src="/img/nav/Navigation-Wedding.png" />WEDDING</Link></li>
-      <li><Link to="/private/where-to-stay"><ItemImage src="/img/nav/Navigation-WhereToStay.png" />WHERE TO STAY</Link></li>
-      <li><Link to="/private/things-to-do"><ItemImage src="/img/nav/Navigation-ThingsToDo.png" />THINGS TO DO</Link></li>
-      <li><Link to="/private/other-events"><ItemImage src="/img/nav/Navigation-OtherEvents.png" />OTHER EVENTS</Link></li>
-      <li><Link to="/private/registry"><ItemImage src="/img/nav/Navigation-Registry.png" />REGISTRY</Link></li>
+      <li><StyledLink to="/private/wedding"><ItemImage src="/img/nav/Navigation-Wedding.png" />WEDDING</StyledLink></li>
+      <li><StyledLink to="/private/where-to-stay"><ItemImage src="/img/nav/Navigation-WhereToStay.png" />WHERE TO STAY</StyledLink></li>
+      <li><StyledLink to="/private/things-to-do"><ItemImage src="/img/nav/Navigation-ThingsToDo.png" />THINGS TO DO</StyledLink></li>
+      <li><StyledLink to="/private/other-events"><ItemImage src="/img/nav/Navigation-OtherEvents.png" />OTHER EVENTS</StyledLink></li>
+      <li><StyledLink to="/private/registry"><ItemImage src="/img/nav/Navigation-Registry.png" />REGISTRY</StyledLink></li>
       </>
   }
   render() {
+    console.log(1)
     return (
       <Container>
         <Media query={{ maxWidth: 700 }}>
           {match => (
             match
-            ? <Menu styles={this.stylesBurger} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>{this.renderLinks()}</Menu>
+            ? <Menu
+                styles={this.stylesBurger}
+                isOpen={false}
+                pageWrapId={ "page-wrap" }
+                outerContainerId={ "outer-container" }>
+                {this.renderLinks()}
+              </Menu>
             : null
           )}
         </Media>

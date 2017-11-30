@@ -8,7 +8,7 @@ export class Registry extends React.Component {
     return (
       <>
       <MainFlex>
-        <Box width={1} p={10}>
+        <Box width={1} p={[20, 10]}>
         <p>
         <strong>Your presence is the best gift we can hope to receive.</strong>
         </p>
@@ -21,7 +21,7 @@ export class Registry extends React.Component {
         </Box>
       </MainFlex>
       <MainFlex>
-        <Grid width={1/6} p={10}>
+        <Grid width={1/6} p={10} ml={[10, 0]}>
           <a href="https://www.plannedparenthood.org" target="_blank"><Img src="/img/Registry-PlannedParenthood.jpg"/></a>
         </Grid>
         <Grid width={1/6} p={10}>
@@ -30,7 +30,7 @@ export class Registry extends React.Component {
         <Grid width={1/6} p={10}>
           <a href="https://www.zola.com/registry/wowerswedding" target="_blank"><Img src="/img/Registry-Zola.jpg"/></a>
         </Grid>
-        <Grid width={1/6} p={10}>
+        <Grid width={1/6} p={10} mr={[10, 0]}>
           <a href="https://www.williams-sonoma.com/registry/find-registry.html?cm_type=gnav" target="_blank"><Img src="/img/Registry-WilliamsSonoma.jpg"/></a>
         </Grid>
       </MainFlex>
