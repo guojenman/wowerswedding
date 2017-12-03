@@ -62,8 +62,8 @@ export class Header extends React.Component {
   stylesBurger = {
     bmBurgerButton: {
       position: 'fixed',
-      width: '2rem',
-      height: '2rem',
+      width: '1.6rem',
+      height: '1.4rem',
       left: '1rem',
       top: '2rem'
     },
