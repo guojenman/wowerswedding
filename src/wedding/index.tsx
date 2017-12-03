@@ -36,7 +36,7 @@ export class Wedding extends React.Component {
           </Paragraph>
           <Paragraph>
   Cocktail Attire<br/>
-  <em>Note that surfaces range from paved pathways to gravel and grass
+  <em>Note that surfaces range from paved pathways to gravel and grass<br/>
   Please choose footwear accordingly</em>
           </Paragraph>
           </Grid>

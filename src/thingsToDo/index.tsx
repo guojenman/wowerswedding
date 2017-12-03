@@ -7,7 +7,7 @@ import { placesEat } from "./placesEat";
 import styled from "styled-components";
 
 const MainFlexLocal = styled(MainFlex)`
-  padding-bottom: 1rem;
+  padding-bottom: 2em;
 `
 export class ThingsToDo extends React.Component {
   categories = [placesEat, placesDrink, placesDo];
@@ -32,8 +32,8 @@ export class ThingsToDo extends React.Component {
             category.map(place => (
               <p key={place.name}>
                 <strong>{place.name}</strong><br/>
-                {place.body}<br />
-                {place.url ? <a href={"http://" + place.url} target="_blank">{place.url}</a> : null}
+                {!!place.body ? <>{place.body} <br/></> : null}
+                {place.url ? <em><a href={"http://" + place.url} target="_blank">{place.url}</a></em> : null}
               </p>
             ))
           }

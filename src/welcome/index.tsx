@@ -1,13 +1,15 @@
 import * as React from "react";
 import styled from "styled-components";
 import { StaggeredMotion, spring } from "react-motion";
+import { Link } from "react-router-dom";
 const imgBg = require("./bg.png");
 
 const Container = styled.div`
   background: url(${imgBg});
   background-position: top center;
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.5;
   height: 100%;
 
   .welcome {
@@ -17,15 +19,14 @@ const Container = styled.div`
   .heading {
     display: inline-block;
     font-weight: 100;
-    font-size: 2.5em;
+    font-size: 3em;
     background: #fff;
-    padding: 1rem;
-    margin-top: 5.5rem;
+    margin-top: 2em;
+    padding: 0 0.5em;
   }
   .body {
     display: inline-block;
     font-weight: 300;
-    line-height: 1.3em;
     background: #fff;
     padding: 1rem;
   }
@@ -35,6 +36,7 @@ const Container = styled.div`
     font-style: italic;
     background: #fff;
     padding: 1rem;
+    margin-top: -0.5em;
   }
   @media (max-width: 767px) {
     font-size: 14px;
@@ -43,7 +45,7 @@ const Container = styled.div`
     }
   }
 `;
-export class ComingSoon extends React.Component {
+export class Welcome extends React.Component {
   render() {
     const parts = [
       <div className="heading">Amanda & Calvin</div>,
@@ -52,9 +54,10 @@ export class ComingSoon extends React.Component {
         Carneros Resort and Spa<br />
         Napa, California<br />
       </div>,
-      <div className="footer">Site coming soon</div>
+      <div className="footer">Enter</div>
     ];
     return (
+      <Link to="/wedding">
       <Container>
         <div className="welcome">
           <StaggeredMotion
@@ -79,6 +82,7 @@ export class ComingSoon extends React.Component {
           </StaggeredMotion>
         </div>
       </Container>
+      </Link>
     );
   }
 }

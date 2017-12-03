@@ -3,11 +3,11 @@ import * as ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
-import { AppConstruction } from "./appConstruction";
+import { App } from "./app";
 
 ReactDOM.render(
   <BrowserRouter>
-    <AppConstruction />
+    <App />
   </BrowserRouter>,
   document.getElementById("root") as HTMLElement
 );

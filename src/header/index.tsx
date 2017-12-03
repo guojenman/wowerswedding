@@ -8,7 +8,7 @@ const Container = styled.div`
   z-index: 1;
   color: rgb(50, 50, 165);
   width: 100%;
-  height: 16em;
+  height: 17em;
   background: #fff;
   text-align: center;
   li {
@@ -23,7 +23,7 @@ const Container = styled.div`
 `
 const Title = styled.h1`
   padding-top: 1em;
-  font-size: 2.75em;
+  font-size: 3em;
   font-weight: 100;
   @media (max-width: 700px) {
     padding-top: 0.5em;
@@ -52,15 +52,8 @@ const ItemImage = styled.img`
 `
 
 const StyledLink = styled(NavLink)`
-  position: relative;
-  &[aria-current="true"]:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -8px;
-    left: 0;
-    background-color: #d9dbf0;
+  &[aria-current="true"] {
+    font-weight:500;
   }
 `
 
@@ -103,15 +96,14 @@ export class Header extends React.Component {
 
   renderLinks() {
     return <>
-      <li><StyledLink to="/private/wedding"><ItemImage src="/img/nav/Navigation-Wedding.png" />WEDDING</StyledLink></li>
-      <li><StyledLink to="/private/where-to-stay"><ItemImage src="/img/nav/Navigation-WhereToStay.png" />WHERE TO STAY</StyledLink></li>
-      <li><StyledLink to="/private/things-to-do"><ItemImage src="/img/nav/Navigation-ThingsToDo.png" />THINGS TO DO</StyledLink></li>
-      <li><StyledLink to="/private/other-events"><ItemImage src="/img/nav/Navigation-OtherEvents.png" />OTHER EVENTS</StyledLink></li>
-      <li><StyledLink to="/private/registry"><ItemImage src="/img/nav/Navigation-Registry.png" />REGISTRY</StyledLink></li>
+      <li><StyledLink to="/wedding"><ItemImage src="/img/nav/Navigation-Wedding.png" />WEDDING</StyledLink></li>
+      <li><StyledLink to="/where-to-stay"><ItemImage src="/img/nav/Navigation-WhereToStay.png" />WHERE TO STAY</StyledLink></li>
+      <li><StyledLink to="/things-to-do"><ItemImage src="/img/nav/Navigation-ThingsToDo.png" />THINGS TO DO</StyledLink></li>
+      <li><StyledLink to="/other-events"><ItemImage src="/img/nav/Navigation-OtherEvents.png" />OTHER EVENTS</StyledLink></li>
+      <li><StyledLink to="/registry"><ItemImage src="/img/nav/Navigation-Registry.png" />REGISTRY</StyledLink></li>
       </>
   }
   render() {
-    console.log(1)
     return (
       <Container>
         <Media query={{ maxWidth: 700 }}>
