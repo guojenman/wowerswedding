@@ -31,7 +31,7 @@ export class Registry extends React.Component {
           <a href="https://www.zola.com/registry/wowerswedding" target="_blank"><Img src="/img/Registry-Zola.jpg"/></a>
         </Grid>
         <Grid width={1/6} p={10} mr={[10, 0]}>
-          <a href="https://www.williams-sonoma.com/registry/find-registry.html?cm_type=gnav" target="_blank"><Img src="/img/Registry-WilliamsSonoma.jpg"/></a>
+          <a href="https://www.williams-sonoma.com/registry/gjsr68w2jh/registry-list.html" target="_blank"><Img src="/img/Registry-WilliamsSonoma.jpg"/></a>
         </Grid>
       </MainFlex>
       </>
