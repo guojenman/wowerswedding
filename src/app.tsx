@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Header } from "./header";
 import styled from "styled-components";
-import { Switch, Route, withRouter, Redirect } from "react-router";
+import { Route, withRouter, Redirect } from "react-router";
+import { AnimatedSwitch } from "react-router-transition";
 import { WhereToStay } from "./whereToStay/index";
 import { ThingsToDo } from "./thingsToDo/index";
 import { Wedding } from "./wedding/index";
@@ -32,6 +33,12 @@ const AppContainer = styled.div`
     text-decoration: none;
     color: inherit;
   }
+  .switch-wrapper {
+    height: 100%;
+    & > div {
+      height: 100%;
+    }
+  }
 `
 
 class AppBase extends React.Component {
@@ -42,7 +49,11 @@ class AppBase extends React.Component {
       <AppContainer>
         {location.pathname !== "/" ? <Header/> : null}
         <div id="page-wrap" style={{height: "100%"}}>
-        <Switch>
+        <AnimatedSwitch
+          atEnter={{ opacity: 0 }}
+          atLeave={{ opacity: 0 }}
+          atActive={{ opacity: 1 }}
+          className="switch-wrapper">
           <Route path="/wedding" exact component={Wedding} />
           <Route path="/where-to-stay" exact component={WhereToStay} />
           <Route path="/things-to-do" exact component={ThingsToDo} />
@@ -50,7 +61,7 @@ class AppBase extends React.Component {
           <Route path="/registry" exact component={Registry} />
           <Route path="/" exact component={Welcome} />
           <Redirect to="/" />
-        </Switch>
+        </AnimatedSwitch>
         </div>
       </AppContainer>
       </div>

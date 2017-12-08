@@ -58,30 +58,30 @@ export class Welcome extends React.Component {
     ];
     return (
       <Link to="/wedding">
-      <Container>
-        <div className="welcome">
-          <StaggeredMotion
-            defaultStyles={[{ opacity: 0, marginLeft: -30 }, { opacity: 0, marginLeft: -30 }, { opacity: 0, marginLeft: -30 }]}
-            styles={(s: any[]) =>
-              s.map((_, i) => {
-                return i === 0
-                  ? { opacity: spring(1), marginLeft: spring(0) }
-                  : { opacity: spring(s[i - 1].opacity), marginLeft: spring(s[i - 1].marginLeft) };
-              })
-            }
-          >
-            {styles => (
-              <div>
-                {styles.map((style, i) => (
-                  <div key={i} style={style}>
-                    {parts[i]}
-                  </div>
-                ))}
-              </div>
-            )}
-          </StaggeredMotion>
-        </div>
-      </Container>
+        <Container>
+          <div className="welcome">
+            <StaggeredMotion
+              defaultStyles={[{ opacity: 0, marginLeft: -30 }, { opacity: 0, marginLeft: -30 }, { opacity: 0, marginLeft: -30 }]}
+              styles={(s: any[]) =>
+                s.map((_, i) => {
+                  return i === 0
+                    ? { opacity: spring(1), marginLeft: spring(0) }
+                    : { opacity: spring(s[i - 1].opacity), marginLeft: spring(s[i - 1].marginLeft) };
+                })
+              }
+            >
+              {styles => (
+                <div>
+                  {styles.map((style, i) => (
+                    <div key={i} style={style}>
+                      {parts[i]}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </StaggeredMotion>
+          </div>
+        </Container>
       </Link>
     );
   }
