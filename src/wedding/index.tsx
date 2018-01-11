@@ -38,7 +38,7 @@ export class Wedding extends React.Component {
   Dinner and dancing will follow in the Napa Ballroom
           </Paragraph>
           <Paragraph>
-            <NavLink to="/menu" onClick={() => console.log(1)}>Dinner Menu</NavLink>
+            <NavLink to="/menu" onClick={() => console.log(1)}><em>Dinner Menu</em></NavLink>
           </Paragraph>
           <Paragraph>
   Cocktail Attire<br/>

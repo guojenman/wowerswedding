@@ -31,7 +31,7 @@ export class Menu extends React.Component {
           </Paragraph>
           <Paragraph>
           Garden Green Salad<br/>
-          Frilly mustard greens, shaved roots, manchego
+          <em>Frilly mustard greens, shaved roots, manchego</em>
           </Paragraph>
           <Paragraph>
           Your choice of one of following entrées:
@@ -39,17 +39,17 @@ export class Menu extends React.Component {
           <Paragraph>
             <img src="/img/Beef.png" style={{height: "1.75em"}}/><br/>
           New York Strip Steak
-          <br/>Potato puree, rainbow shard
+          <br/><em>Potato purée, rainbow shard</em>
           </Paragraph>
           <Paragraph>
           <img src="/img/Chicken.png" style={{height: "1.75em"}}/><br/>
           Coq au Vin
-          <br/>Baby carrots, pearl onionsshard
+          <br/><em>Baby carrots, pearl onionsshard</em>
           </Paragraph>
           <Paragraph>
           <img src="/img/Veggie.png" style={{height: "1.75em"}}/><br/>
           Mushroom Risotto (vegetarian)
-          <br/>Truffle, hen of the woods, micro greens
+          <br/><em>Truffle, hen of the woods, micro greens</em>
           </Paragraph>
           <Paragraph>
           Dessert
