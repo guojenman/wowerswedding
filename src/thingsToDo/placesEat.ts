@@ -30,7 +30,7 @@ export const placesEat = [
     url: "thomaskeller.com/addendum"
   },
   {
-    name: "Boony Cafe",
+    name: "Boonfly Cafe",
     body: "Even Calvin and Amanda (who don’t typically eat sweets) like the doughnuts! Recommended for brunch or lunch.",
     url: "boonflycafe.com"
   },

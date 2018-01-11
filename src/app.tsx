@@ -9,6 +9,7 @@ import { Wedding } from "./wedding/index";
 import { OtherEvents } from "./otherEvents/index";
 import { Registry } from "./registry/index";
 import { Welcome } from "./welcome/index";
+import { Menu } from "./menu/index";
 
 const AppContainer = styled.div`
   font-family: Roboto script=all rev=1;
@@ -42,11 +43,19 @@ const AppContainer = styled.div`
 `
 
 class AppBase extends React.Component {
+
+  componentDidMount() {
+    const {history} = this.props as any;
+    history.listen((loc, action) => {
+      document.querySelector('.scroller')!.scrollTop = 0;
+    })
+  }
+
   render() {
     const {location} = this.props as any;
     return (
       <div id="outer-container" style={{height: "100%"}}>
-      <AppContainer>
+      <AppContainer className="scroller">
         {location.pathname !== "/" ? <Header/> : null}
         <div id="page-wrap" style={{height: "100%"}}>
         <AnimatedSwitch
@@ -59,6 +68,7 @@ class AppBase extends React.Component {
           <Route path="/things-to-do" exact component={ThingsToDo} />
           <Route path="/other-events" exact component={OtherEvents} />
           <Route path="/registry" exact component={Registry} />
+          <Route path="/menu" exact component={Menu} />
           <Route path="/" exact component={Welcome} />
           <Redirect to="/" />
         </AnimatedSwitch>
