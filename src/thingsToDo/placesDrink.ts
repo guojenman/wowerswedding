@@ -6,7 +6,7 @@ export const placesDrink = [
   },
   {
     name: "Joseph Phelps",
-    body: "You may  nd Richard, clad in cycling spandex, enjoying the estate’s sweeping views. A pricey tasting but well worth it.",
+    body: "You may find Richard, clad in cycling spandex, enjoying the estate’s sweeping views. A pricey tasting but well worth it.",
     url: "josephphelps.com"
   },
   {
@@ -16,7 +16,7 @@ export const placesDrink = [
   },
   {
     name: "Ridge",
-    body: "The estate tour and tasting brings you to the old-growth vineyards, through the unique facility built of straw and clay, and  nishes in the private tasting room.",
+    body: "The estate tour and tasting brings you to the old-growth vineyards, through the unique facility built of straw and clay, and finishes in the private tasting room.",
     url: "ridgewine.com/visit/lytton-springs"
   },
   {

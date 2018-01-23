@@ -8,18 +8,29 @@ export class OtherEvents extends React.Component {
       <>
         <MainFlexLocal>
           <Grid width={1}>
-            <img src="/img/Other-WelcomeDrinks.jpg" width="100%"/>
+            <img src="/img/WelcomeDrinks.jpg" width="100%"/>
           </Grid>
         </MainFlexLocal>
         <MainFlexLocal2>
           <Grid width={4/6} style={{margin: "0 auto"}}>
           <Paragraph>
-          Welcome Drinks<br/>
-          Hosted by Jessica Wong and Kate Bowers
-          </Paragraph>
-          <Paragraph>
+          Welcome Drinks<br/><br/>
           Friday, May 11<br/>
-          Details to follow
+          <em>Details to follow</em>
+          </Paragraph>
+          </Grid>
+        </MainFlexLocal2>
+        <MainFlexLocal>
+          <Grid width={1}>
+            <img src="/img/Brunch.jpg" width="100%"/>
+          </Grid>
+        </MainFlexLocal>
+        <MainFlexLocal2>
+          <Grid width={4/6} style={{margin: "0 auto"}}>
+          <Paragraph>
+          Brunch<br/><br/>
+          Sunday, May 13<br/>
+          <em>Details to follow</em>
           </Paragraph>
           </Grid>
         </MainFlexLocal2>

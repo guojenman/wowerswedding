@@ -41,7 +41,7 @@ export const placesEat = [
   },
   {
     name: "Cindy’s Backstreet Kitchen",
-    body: "Home of the famous camp re pie!",
+    body: "Home of the famous campfire pie!",
     url: "cindysbackstreetkitchen.com"
   }
 ]

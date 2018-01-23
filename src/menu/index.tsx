@@ -39,7 +39,7 @@ export class Menu extends React.Component {
           <Paragraph>
             <img src="/img/Beef.png" style={{height: "1.75em"}}/><br/>
           New York Strip Steak
-          <br/><em>Potato purée, rainbow shard</em>
+          <br/><em>Potato purée, rainbow chard</em>
           </Paragraph>
           <Paragraph>
           <img src="/img/Chicken.png" style={{height: "1.75em"}}/><br/>
