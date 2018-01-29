@@ -11,7 +11,7 @@ export const placesDrink = [
   },
   {
     name: "Domaine Carneros",
-    body: "Enjoy a  ight of sparkling wines on the patio of the French-style château. California baroque!",
+    body: "Enjoy a flight of sparkling wines on the patio of the French-style château. California baroque!",
     url: "domainecarneros.com"
   },
   {

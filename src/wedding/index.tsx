@@ -28,9 +28,9 @@ export class Wedding extends React.Component {
         <MainFlexLocal2>
           <Grid width={4/6} style={{margin: "0 auto"}}>
           <Paragraph>
-  5:00 pm<br/>
+  Saturday, May 12, 5:00 pm<br/>
   The Arbor, Carneros Resort and Spa<br/>
-  4048 Sonoma Highway, Napa California
+  4048 Sonoma Highway, Napa, California
           </Paragraph>
           <Paragraph>
   After the ceremony, cocktails and hors d'oeuvres will be served in the Courtyard
